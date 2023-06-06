@@ -1,0 +1,36 @@
+What's on the menu? Random recipe generator
+
+App in which user can generate a number of random recipes to browse - an app for those who have a hard time making decisions of what to eat and need a structured number of options to choose between.
+
+MVP goals:
+1. Form with drop down for user to select how many random recipes they would like returned
+2. Upon form submission, a gallery of selected number of random recipes appears with links to each recipe
+
+**APP COMPONENT**
+1. Header
+3. Recipe Call component (incl form component & recipe gallery component)
+4. Footer
+
+**RECIPE CALL COMPONENT**
+1. Initialize state to represent the array of recipe objects coming from the API
+2. useEffect to make a call to the spoonacular API using number from form as number param & update state using array returned to us from the API
+3. return:
+    - form component
+    - ul wherein we map through state array and for each object in the array, return a recipe component (data passed in as props)
+    
+
+**FORM COMPONENT**
+1. form that allows user to select (via a drop down) number of random recipes that they would like generator to produce
+
+**RECIPE COMPONENT**
+1. component to display data from API
+2. use destructuring to extract properties with values we wish to render on the page
+    - the name of the recipe
+    - an image (& alt text) 
+    - ingredients 
+    - whether it is appropriate for certain dietary needs 
+    - link to recipe
+
+Stretch Goals:
+- Advanced filtering (recipes incl. specific ingredients, only recipes that are suitable for certain diets, etc)
+- Allow users to save certain recipes for later in a "recipe box" using firebase
